@@ -15,3 +15,9 @@ lobstr::obj_addr(c) # "0x7fefa5891f28"
 lobstr::obj_addr(d) # "0x7fefadf92a00"
 
 ## 2
+# Yes they all point to the same underlying function object
+lobstr::obj_addr(mean)
+lobstr::obj_addr(base::mean)
+lobstr::obj_addr(get('mean'))
+lobstr::obj_addr(evalq(mean))
+lobstr::obj_addr(match.fun(mean))
