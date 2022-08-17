@@ -1,4 +1,4 @@
-### 2.2
+### 2.2 Binding Basics
 library(lobstr)
 
 ## 1
@@ -21,3 +21,22 @@ lobstr::obj_addr(base::mean)
 lobstr::obj_addr(get('mean'))
 lobstr::obj_addr(evalq(mean))
 lobstr::obj_addr(match.fun(mean))
+
+## 3
+## not sure yet
+
+## 4
+# X is prepended when necessary
+make.names('_2') # "X_2"
+# invalid characters are made to '.'
+make.names('b2+') # "b2."
+# '.' is appended if needed
+make.names('if') # "if."
+# missing values are translated to NA
+# duplicate values are altered by make.unique()
+
+## 5
+# '.' cannot be in the first place, and '123e1' is reserved.
+
+
+
